@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const Monday1 = () => {
+const Monday_1 = () => {
 
     return (
         <div>
@@ -11,7 +11,7 @@ const Monday1 = () => {
     );
 };
 
-export default Monday1;
+export default Monday_1;
 
 
 
