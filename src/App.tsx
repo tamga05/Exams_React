@@ -20,7 +20,9 @@ function App() {
                     Learn React
                 </a>
             </header>
+
             <Monday_1/>
+
         </div>
     );
 }
