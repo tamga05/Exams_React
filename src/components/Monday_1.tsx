@@ -88,19 +88,19 @@ export const User2: React.FC<UserPropsType> = (props) => {
 
 //4.
 
-// type PropsType1 = {
-//     city: string
-//     country: string
-//     coords?: string
-// }
-// // 'belarus', 'minsk', '53.917501,27.604851'
-// export const Wrapper1 = () => {
-//     return <PropsComponent1 city="minsk" country='belarus'/>
-// }
-//
-// export const PropsComponent1: React.FC<PropsType1> = (props) => {
-//     return <div>hello</div>
-// }
+type PropsType1 = {
+    city: string
+    country: string
+    coords?: string
+}
+// 'belarus', 'minsk', '53.917501,27.604851'
+export const Wrapper1 = () => {
+    return <PropsComponent1 city="minsk" country='belarus'/>
+}
+
+export const PropsComponent1: React.FC<PropsType1> = (props) => {
+    return <div>hello</div>
+}
 
 //5.
 
