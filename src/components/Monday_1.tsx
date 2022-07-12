@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 const Monday_1 = () => {
 
     return (
@@ -124,33 +123,33 @@ export const User1: React.FC<UserPropsType1> = (props) => {
 
 //6.
 
-// type NewsType = {
-//   title: string
-//   author: string
-// }
-// type ArticleType = {
-//   title: string
-//   date: string
-//   text: string
-// }
-// type PagePropsType = {
-//   news: NewsType[]
-//   mainArticle: ArticleType
-// }
-// export const Page: React.FC<PagePropsType> = (props) => {
-//   return <div>
-//     <article>
-//       <h1>Название: {props.mainArticle.title}</h1>
-//       <div>{props.mainArticle.date}</div>
-//       <div>{props.mainArticle.text}</div>
-//     </article>
-//     <aside>Articles:
-//       <ul>
-//         {props.news.map(n => <li>{n.title}, {n.author}</li>)}
-//       </ul>
-//     </aside>
-//   </div>
-// }
+type NewsType = {
+  title: string
+  author: string
+}
+type ArticleType = {
+  title: string
+  date: string
+  text: string
+}
+type PagePropsType1 = {
+  news: NewsType[]
+  mainArticle: ArticleType
+}
+export const Page1: React.FC<PagePropsType1> = (props) => {
+  return <div>
+    <article>
+      <h1>Название: {props.mainArticle.title}</h1>
+      <div>{props.mainArticle.date}</div>
+      <div>{props.mainArticle.text}</div>
+    </article>
+    <aside>Articles:
+      <ul>
+        {props.news.map(n => <li>{n.title}, {n.author}</li>)}
+      </ul>
+    </aside>
+  </div>
+}
 
 //7.
 
@@ -292,3 +291,5 @@ export const User1: React.FC<UserPropsType1> = (props) => {
 // ReactDOM.render(<App/>,
 //     document.getElementById('root')
 // )
+
+

@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Monday_1 from './components/Monday_1';
+import Monday_2 from './components/Monday_2';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
             </header>
 
             <Monday_1/>
+            <Monday_2/>
 
         </div>
     );
