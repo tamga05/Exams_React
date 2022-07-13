@@ -19,13 +19,13 @@ export default Monday_2;
 //==============================================================================================================================================================
 
 // //1.
-//
+
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
 //
 // function UsersList() {
-//     const results = useState<any>(["Bob", "Alex", "Ann"])
+//     const results = useState<Array<string>>(["Bob", "Alex", "Ann"])
 //     const users = results[0]
 //     const setUsers = results[1]
 //
@@ -37,12 +37,12 @@ export default Monday_2;
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
-//
-// // Какой тип правильнее указать вместо "any" при типизации стэйта?
-//
-//
+
+// Какой тип правильнее указать вместо "any" при типизации стэйта?
+
+
 // //2.
-//
+
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -58,10 +58,10 @@ export default Monday_2;
 // ReactDOM.render(
 //     <UsersList />, document.getElementById('root')
 // );
-//
-// // Что вернёт выражение: typeof useState?
-//
-//
+
+// Что вернёт выражение: typeof useState?
+
+
 // //3.
 //
 // import React, {useState} from 'react';
