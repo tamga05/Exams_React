@@ -1,6 +1,3 @@
-import React from 'react';
-
-
 const Monday_2 = () => {
 
     return (
@@ -10,7 +7,7 @@ const Monday_2 = () => {
     );
 };
 
-export default Monday_2;
+export  default Monday_2;
 
 
 

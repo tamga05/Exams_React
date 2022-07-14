@@ -20,48 +20,48 @@ export default Monday_1;
 
 //1.
 
-export const Wrapper = () => {
-    return <User city="minsk"/>
-}
-
-type PropsType = {
-    city: string
-}
-
-export const User: React.FC<PropsType> = (props) => {
-    return <div>hello</div>
-}
+// export const Wrapper = () => {
+//     return <User city="minsk"/>
+// }
+//
+// type PropsType = {
+//     city: string
+// }
+//
+// export const User: React.FC<PropsType> = (props) => {
+//     return <div>hello</div>
+// }
 
 //2.
 
-import ReactDOM from 'react-dom'
-
-export const YoutubeVideo = () => {
-    return <div>
-        <VideoHeader/>
-        <VideoContent/>
-        <VideoStatistics/>
-    </div>
-}
-export const VideoHeader = () => {
-    return <div>
-        😀 Заголовок видео
-    </div>
-}
-export const VideoContent = () => {
-    return <div>
-        📼 Контент видео
-    </div>
-}
-export const VideoStatistics = () => {
-    return <div>
-        📊 Статистика лайков
-    </div>
-}
-
-ReactDOM.render(<div><YoutubeVideo/></div>,
-    document.getElementById('root')
-);
+// import ReactDOM from 'react-dom'
+//
+// export const YoutubeVideo = () => {
+//     return <div>
+//         <VideoHeader/>
+//         <VideoContent/>
+//         <VideoStatistics/>
+//     </div>
+// }
+// export const VideoHeader = () => {
+//     return <div>
+//         😀 Заголовок видео
+//     </div>
+// }
+// export const VideoContent = () => {
+//     return <div>
+//         📼 Контент видео
+//     </div>
+// }
+// export const VideoStatistics = () => {
+//     return <div>
+//         📊 Статистика лайков
+//     </div>
+// }
+//
+// ReactDOM.render(<div><YoutubeVideo/></div>,
+//     document.getElementById('root')
+// );
 
 //Что нужно написать вместо ххх, чтобы на экране увидеть:
 //😀 Заголовок видео
@@ -71,164 +71,164 @@ ReactDOM.render(<div><YoutubeVideo/></div>,
 
 //3.
 
-type UserPropsType = {
-    name: string
-    description: string
-}
-export const User2: React.FC<UserPropsType> = (props) => {
-    return <div>
-        <h1>Имя: {props.name}</h1>
-        //
-        <div>Описание: {props.description}</div>
-    </div>
-}
+// type UserPropsType = {
+//     name: string
+//     description: string
+// }
+// export const User2: React.FC<UserPropsType> = (props) => {
+//     return <div>
+//         <h1>Имя: {props.name}</h1>
+//         //
+//         <div>Описание: {props.description}</div>
+//     </div>
+// }
 
 //Что нужно написать вместо ххх, что бы код работал?
 
 //4.
 
-type PropsType1 = {
-    city: string
-    country: string
-    coords?: string
-}
-// 'belarus', 'minsk', '53.917501,27.604851'
-export const Wrapper1 = () => {
-    return <PropsComponent1 city="minsk" country='belarus'/>
-}
-
-export const PropsComponent1: React.FC<PropsType1> = (props) => {
-    return <div>hello</div>
-}
+// type PropsType1 = {
+//     city: string
+//     country: string
+//     coords?: string
+// }
+// // 'belarus', 'minsk', '53.917501,27.604851'
+// export const Wrapper1 = () => {
+//     return <PropsComponent1 city="minsk" country='belarus'/>
+// }
+//
+// export const PropsComponent1: React.FC<PropsType1> = (props) => {
+//     return <div>hello</div>
+// }
 
 //5.
 
-type PagePropsType = {
-  age: number
-  name: string
-  avatarUrl: string
-}
-
-const Page: React.FC<PagePropsType> = (props) => {
-  return <User1 a={props.age} n={props.name} />
-}
-
-type UserPropsType1 = {
-  a: number
-  n: string
-}
-export const User1: React.FC<UserPropsType1> = (props) => {
-  return <div>name: {props.n}, age: {props.a}</div>
-}
+// type PagePropsType = {
+//   age: number
+//   name: string
+//   avatarUrl: string
+// }
+//
+// const Page: React.FC<PagePropsType> = (props) => {
+//   return <User1 a={props.age} n={props.name} />
+// }
+//
+// type UserPropsType1 = {
+//   a: number
+//   n: string
+// }
+// export const User1: React.FC<UserPropsType1> = (props) => {
+//   return <div>name: {props.n}, age: {props.a}</div>
+// }
 
 //6.
 
-type NewsType = {
-  title: string
-  author: string
-}
-type ArticleType = {
-  title: string
-  date: string
-  text: string
-}
-type PagePropsType1 = {
-  news: NewsType[]
-  mainArticle: ArticleType
-}
-export const Page1: React.FC<PagePropsType1> = (props) => {
-  return <div>
-    <article>
-      <h1>Название: {props.mainArticle.title}</h1>
-      <div>{props.mainArticle.date}</div>
-      <div>{props.mainArticle.text}</div>
-    </article>
-    <aside>Articles:
-      <ul>
-        {props.news.map(n => <li>{n.title}, {n.author}</li>)}
-      </ul>
-    </aside>
-  </div>
-}
+// type NewsType = {
+//   title: string
+//   author: string
+// }
+// type ArticleType = {
+//   title: string
+//   date: string
+//   text: string
+// }
+// type PagePropsType1 = {
+//   news: NewsType[]
+//   mainArticle: ArticleType
+// }
+// export const Page1: React.FC<PagePropsType1> = (props) => {
+//   return <div>
+//     <article>
+//       <h1>Название: {props.mainArticle.title}</h1>
+//       <div>{props.mainArticle.date}</div>
+//       <div>{props.mainArticle.text}</div>
+//     </article>
+//     <aside>Articles:
+//       <ul>
+//         {props.news.map(n => <li>{n.title}, {n.author}</li>)}
+//       </ul>
+//     </aside>
+//   </div>
+// }
 
 //7.
 
-type UserWalletType = {
-    title: string
-    amount: number
-}
-
-type UserWalletPropsType = {
-    wallet: UserWalletType
-}
-
-export const UserWallet: React.FC<UserWalletPropsType> = (props) => {
-    return (
-        <div>
-            title: {props.wallet.title},
-            amount: {props.wallet.amount}
-        </div>
-    )
-}
-
-export const UserMoney = () => {
-
-    const wallets = [
-        {title: 'bitcoin', amount: 1},
-        {title: '$', amount: 100}
-    ]
-
-    return (
-        <div>
-            <UserWallet wallet={wallets[0]}/>
-            <UserWallet wallet={wallets[1]}/>
-        </div>
-    )
-}
+// type UserWalletType = {
+//     title: string
+//     amount: number
+// }
+//
+// type UserWalletPropsType = {
+//     wallet: UserWalletType
+// }
+//
+// export const UserWallet: React.FC<UserWalletPropsType> = (props) => {
+//     return (
+//         <div>
+//             title: {props.wallet.title},
+//             amount: {props.wallet.amount}
+//         </div>
+//     )
+// }
+//
+// export const UserMoney = () => {
+//
+//     const wallets = [
+//         {title: 'bitcoin', amount: 1},
+//         {title: '$', amount: 100}
+//     ]
+//
+//     return (
+//         <div>
+//             <UserWallet wallet={wallets[0]}/>
+//             <UserWallet wallet={wallets[1]}/>
+//         </div>
+//     )
+// }
 
 //8.
 
-// import ReactDOM from 'react-dom'
-//
-// export const VideoHeader = (props: { videoName: string }) => {
-//     return <div>
-//         😀 {props.videoName}
-//     </div>
-// }
-// export const VideoContent = (props: { videoContent: string }) => {
-//     return <div>
-//         📼 <a href={props.videoContent}>{props.videoContent}</a>
-//     </div>
-// }
-// export const VideoDescription = (props: { videoDescription: string }) => {
-//     return <div>
-//         📑 {props.videoDescription}
-//     </div>
-// }
-//
-// export const YoutubeVideo = (props: any) => {
-//
-//     return <div>
-//         <VideoHeader videoName={props.video.title}/>
-//         <VideoContent videoContent={props.video.link}/>
-//         <VideoDescription videoDescription={props.video.description}/>
-//     </div>
-// }
-//
-//
-// export const App = () => {
-//     const video = {
-//         title: 'Samurai way',
-//         link: 'https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8',
-//         description: 'Best free react-course'
-//     }
-//
-//     return <YoutubeVideo video={video}/>
-// }
-//
-// ReactDOM.render(<App/>,
-//     document.getElementById('root')
-// );
+import ReactDOM from 'react-dom'
+
+export const VideoHeader = (props: { videoName: string }) => {
+    return <div>
+        😀 {props.videoName}
+    </div>
+}
+export const VideoContent = (props: { videoContent: string }) => {
+    return <div>
+        📼 <a href={props.videoContent}>{props.videoContent}</a>
+    </div>
+}
+export const VideoDescription = (props: { videoDescription: string }) => {
+    return <div>
+        📑 {props.videoDescription}
+    </div>
+}
+
+export const YoutubeVideo = (props: any) => {
+
+    return <div>
+        <VideoHeader videoName={props.video.title}/>
+        <VideoContent videoContent={props.video.link}/>
+        <VideoDescription videoDescription={props.video.description}/>
+    </div>
+}
+
+
+export const App = () => {
+    const video = {
+        title: 'Samurai way',
+        link: 'https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8',
+        description: 'Best free react-course'
+    }
+
+    return <YoutubeVideo video={video}/>
+}
+
+ReactDOM.render(<App/>,
+    document.getElementById('root')
+);
 
 //9.
 
