@@ -15,30 +15,29 @@ export  default Monday_2;
 // Экзамены. Понедельник 2-неделя.
 //==============================================================================================================================================================
 
-// //1.
+//1.
 
-// import React, {useState} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// function UsersList() {
-//     const results = useState<Array<string>>(["Bob", "Alex", "Ann"])
-//     const users = results[0]
-//     const setUsers = results[1]
-//
-//     return (
-//         <p>Тут будет список пользователей</p>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
-// );
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+function UsersList() {
+    const results = useState<Array<string>>(["Bob", "Alex", "Ann"])
+    const users = results[0]
+    const setUsers = results[1]
+
+    return (
+        <p>Тут будет список пользователей</p>
+    )
+}
+
+ReactDOM.render(
+    <UsersList/>, document.getElementById('root')
+);
 
 // Какой тип правильнее указать вместо "any" при типизации стэйта?
 
-
-// //2.
+//2.
 
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
@@ -58,9 +57,8 @@ export  default Monday_2;
 
 // Что вернёт выражение: typeof useState?
 
+//3.
 
-// //3.
-//
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -79,12 +77,11 @@ export  default Monday_2;
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
-//
-// // Чему равно results.length?
-//
-//
-// //4.
-//
+
+// Чему равно results.length?
+
+//4.
+
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -100,13 +97,11 @@ export  default Monday_2;
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
-// // Что вернёт выражение: Array.isArray(users)?
-//
-//
-//
-//
-// //5.
-//
+
+// Что вернёт выражение: Array.isArray(users)?
+
+//5.
+
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -121,12 +116,11 @@ export  default Monday_2;
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
-// // Что вернёт выражение: typeof setUsers?
-//
-//
-//
-// //6.
-//
+
+// Что вернёт выражение: typeof setUsers?
+
+//6.
+
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -147,10 +141,11 @@ export  default Monday_2;
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
-// // Что надо вставить вместо ХХХ, чтобы код заработал?
-//
-// //7.
-//
+
+// Что надо вставить вместо ХХХ, чтобы код заработал?
+
+//7.
+
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -173,11 +168,11 @@ export  default Monday_2;
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
-// // Что надо вставить вместо XXX, чтобы код заработал?
-//
-//
-// //8.
-//
+
+// Что надо вставить вместо XXX, чтобы код заработал?
+
+//8.
+
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -200,11 +195,11 @@ export  default Monday_2;
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
-// // Что вернёт выражение: Array.isArray(usersList)?
-//
-//
-// //9.
-//
+
+// Что вернёт выражение: Array.isArray(usersList)?
+
+//9.
+
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -226,11 +221,11 @@ export  default Monday_2;
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
-// // Что вернёт выражение: typeof getUser?
-//
-//
-// //10.
-//
+
+// Что вернёт выражение: typeof getUser?
+
+//10.
+
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -273,4 +268,5 @@ export  default Monday_2;
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
-// // Что надо написать вместо XXX, чтобы код работал?
+
+// Что надо написать вместо XXX, чтобы код работал?

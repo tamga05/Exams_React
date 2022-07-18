@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Monday_1 from './components/Monday_1';
 import Monday_2 from './components/Monday_2';
+import Monday_3 from './components/Monday_3';
+
 
 function App() {
     return (
@@ -24,6 +26,7 @@ function App() {
 
             <Monday_1/>
             <Monday_2/>
+            <Monday_3/>
 
         </div>
     );
