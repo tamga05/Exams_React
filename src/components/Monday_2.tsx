@@ -7,8 +7,7 @@ const Monday_2 = () => {
     );
 };
 
-export  default Monday_2;
-
+export default Monday_2;
 
 
 //==============================================================================================================================================================
@@ -17,43 +16,43 @@ export  default Monday_2;
 
 //1.
 
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-function UsersList() {
-    const results = useState<Array<string>>(["Bob", "Alex", "Ann"])
-    const users = results[0]
-    const setUsers = results[1]
-
-    return (
-        <p>Тут будет список пользователей</p>
-    )
-}
-
-ReactDOM.render(
-    <UsersList/>, document.getElementById('root')
-);
-
-// Какой тип правильнее указать вместо "any" при типизации стэйта?
-
-//2.
-
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
 //
 // function UsersList() {
-//     const [users, setUsers] = useState<Array<string>>(["Bob", "Alex", "Ann"])
+//     const results = useState<Array<string>>(['Bob', 'Alex', 'Ann'])
+//     const users = results[0]
+//     const setUsers = results[1]
 //
 //     return (
-//         <p>Тут будет список пользователей!</p>
+//         <p>Тут будет список пользователей</p>
 //     )
 // }
 //
 // ReactDOM.render(
-//     <UsersList />, document.getElementById('root')
+//     <UsersList/>, document.getElementById('root')
 // );
+
+// Какой тип правильнее указать вместо "any" при типизации стэйта?
+
+//2.
+
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+function UsersList() {
+    const [users, setUsers] = useState<Array<string>>(["Bob", "Alex", "Ann"])
+
+    return (
+        <p>Тут будет список пользователей!</p>
+    )
+}
+
+ReactDOM.render(
+    <UsersList />, document.getElementById('root')
+);
 
 // Что вернёт выражение: typeof useState?
 

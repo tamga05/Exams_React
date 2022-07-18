@@ -7,8 +7,7 @@ const Monday_3 = () => {
     );
 };
 
-export  default Monday_3;
-
+export default Monday_3;
 
 
 //==============================================================================================================================================================
@@ -45,14 +44,14 @@ export  default Monday_3;
 //         <main>
 //             <h4>User list:</h4>
 //             <ul>
-//                 {/*{*/}
-//                 {/*    users.map(u => <User xxx={u.id}*/}
-//                 {/*                         id={u.id}*/}
-//                 {/*                         name={u.name}*/}
-//                 {/*                         age={u.age}*/}
-//                 {/*        />*/}
-//                 {/*    )*/}
-//                 {/*}*/}
+//                 {
+//                     users.map(u => <User xxx={u.id}                          // key
+//                                          id={u.id}
+//                                          name={u.name}
+//                                          age={u.age}
+//                         />
+//                     )
+//                 }
 //             </ul>
 //         </main>
 //     )
@@ -83,18 +82,21 @@ export  default Monday_3;
 // }
 //
 // function UsersList() {
+//
 //     const data: Array<UserType> = [
 //         {id: 1, name: "Bob", age: 34},
 //         {id: 2, name: "Alex", age: 29},
 //         {id: 3, name: "Ann", age: 25},
 //         {id: 4, name: "John", age: 36},
 //     ]
+//
 //     const [users, setUsers] = useState<Array<UserType>>(data)
+//
 //     return (
 //         <main>
 //             <h4>User list:</h4>
 //             <ul>
-//                 {/*{ users.map(u => <User key={u.id} {...xxx} />) }*/}
+//                 { users.map(u => <User key={u.id} {...xxx} />) }                  // u
 //             </ul>
 //         </main>
 //     )
@@ -133,12 +135,12 @@ export  default Monday_3;
 //     ]
 //     const [users, setUsers] = useState<Array<UserType>>(data)
 //     // Пользователи старше 25 лет:
-//     // const olderThen25Users = users.xxx(u => u.age > 25)
+//     const olderThen25Users = users.xxx(u => u.age > 25)                           // filter
 //     return (
 //         <main>
 //             <h4>User list:</h4>
 //             <ul>
-//                 {/*{ olderThen25Users.map(u => <User key={u.id} {...u}/>)}*/}
+//                 { olderThen25Users.map(u => <User key={u.id} {...u}/>)}
 //             </ul>
 //         </main>
 //     )
@@ -177,13 +179,16 @@ export  default Monday_3;
 //     ]
 //     const [users, setUsers] = useState<Array<UserType>>(data)
 //     // Необходимо отрендерить список пользователей старше 25 лет:
-//     // const getOlderThen25Users = (u: xxx) => u.age > 25
-//     // const olderThen25Users = users.filter(getOlderThen25Users)
+//
+//     const getOlderThen25Users = (u: xxx) => u.age > 25                                     // UserType
+//
+//     const olderThen25Users = users.filter(getOlderThen25Users)
+//
 //     return (
 //         <main>
 //             <h4>User list:</h4>
 //             <ul>
-//                 {/*{ olderThen25Users.map(u => <User key={u.id} {...u}/>)}*/}
+//                 { olderThen25Users.map(u => <User key={u.id} {...u}/>)}
 //             </ul>
 //         </main>
 //     )
@@ -221,9 +226,12 @@ export  default Monday_3;
 //         {id: 4, name: "John", age: 30},
 //     ]
 //     const [users, setUsers] = useState<Array<UserType>>(data)
-//     // Необходимо отрендерить список ользователей старше 25 лет:
+//     // Необходимо отрендерить список пользователей старше 25 лет:
+//
 //     const getOlderThen25Users = (u: UserType) => u.age > 25
+//
 //     const olderThen25Users = users.filter(getOlderThen25Users)
+//
 //     return (
 //         <main>
 //             <h4>User list:</h4>
@@ -238,7 +246,7 @@ export  default Monday_3;
 //     <UsersList/>, document.getElementById('root')
 // );
 
-// Что вернёт выражение: Array.isArray(olderThen25Users)
+// Что вернёт выражение: Array.isArray(olderThen25Users)                                    // true
 
 //6.
 
@@ -274,9 +282,12 @@ export  default Monday_3;
 //         {id: 4, name: "John", age: 30},
 //     ]
 //     const [users, setUsers] = useState<Array<UserType>>(data)
+//
 //     const deleteUser = (userID: number) => {
+//
 //         const filteredUsers = users.filter(u => u.id !== userID)
-//         // setUsers(xxx)
+//
+//         setUsers(xxx)                                                               // filteredUsers
 //     }
 //     return (
 //         <main>
@@ -304,10 +315,9 @@ export  default Monday_3;
 // import ReactDOM from 'react-dom';
 // import './index.css';
 //
+//
 // function Button() {
-//     return <button
-//         // onClick={xxx}
-//     >Click</button>
+//     return <button onClick={xxx}>Click</button>                                       // () => alert()
 // }
 //
 //
@@ -326,7 +336,7 @@ export  default Monday_3;
 //
 // function Button() {
 //     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
-//         // console.log((typeof e) === ххх)
+//         // console.log((typeof e) === ххх)                                               // 'object'
 //     }
 //     return <button onClick={onClickHandler} >Click</button>
 // }
@@ -348,7 +358,7 @@ export  default Monday_3;
 // function Button() {
 //     const [tagName, setTagName] = useState<string>()
 //     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
-//         // setTagName(e.xxx.tagName)
+//         setTagName(e.xxx.tagName)                                                       // currentTarget
 //     }
 //     return (
 //         <>
@@ -379,7 +389,7 @@ export  default Monday_3;
 // }
 //
 // type UserPropsType = UserType & {
-//     deleteUser: (id: any) => void
+//     deleteUser: (id: any) => void                                                                        // number
 // }
 //
 // function User(props: UserPropsType) {
