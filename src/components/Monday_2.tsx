@@ -58,35 +58,15 @@ export default Monday_2;
 
 //3.
 
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-function UsersList() {
-    const results = useState<Array<string>>(["Bob", "Alex", "Ann"])
-
-    const users = results[0]
-    const setUsers = results[1]
-
-    return (
-        <p>Тут будет список пользователей</p>
-    )
-}
-
-ReactDOM.render(
-    <UsersList/>, document.getElementById('root')
-);
-
-// Чему равно results.length?
-
-//4.
-
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
 //
 // function UsersList() {
-//     const [users, setUsers] = useState<Array<string>>(["Bob", "Alex", "Ann"])
+//     const results = useState<Array<string>>(["Bob", "Alex", "Ann"])
+//
+//     const users = results[0]
+//     const setUsers = results[1]
 //
 //     return (
 //         <p>Тут будет список пользователей</p>
@@ -96,6 +76,26 @@ ReactDOM.render(
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
+
+// Чему равно results.length?
+
+//4.
+
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+function UsersList() {
+    const [users, setUsers] = useState<Array<string>>(["Bob", "Alex", "Ann"])
+
+    return (
+        <p>Тут будет список пользователей</p>
+    )
+}
+
+ReactDOM.render(
+    <UsersList/>, document.getElementById('root')
+);
 
 // Что вернёт выражение: Array.isArray(users)?
 
