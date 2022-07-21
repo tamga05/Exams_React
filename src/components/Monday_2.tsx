@@ -145,33 +145,6 @@ export default Monday_2;
 
 //7.
 
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-function UsersList() {
-    const [users, setUsers] = useState<Array<string>>(["Bob", "Alex", "Ann"])
-    const getUser = (user: string) => <li>{user}</li>
-    const usersList = users.map(getUser)
-
-    return (
-        <main>
-            <h4>User list:</h4>
-            <ul>
-                {usersList}
-            </ul>
-        </main>
-    )
-}
-
-ReactDOM.render(
-    <UsersList/>, document.getElementById('root')
-);
-
-// Что надо вставить вместо XXX, чтобы код заработал?
-
-//8.
-
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -194,6 +167,33 @@ ReactDOM.render(
 // ReactDOM.render(
 //     <UsersList/>, document.getElementById('root')
 // );
+
+// Что надо вставить вместо XXX, чтобы код заработал?
+
+//8.
+
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+function UsersList() {
+    const [users, setUsers] = useState<Array<string>>(["Bob", "Alex", "Ann"])
+    const getUser = (user: string) => <li>{user}</li>
+    const usersList = users.map(getUser)
+
+    return (
+        <main>
+            <h4>User list:</h4>
+            <ul>
+                {usersList}
+            </ul>
+        </main>
+    )
+}
+
+ReactDOM.render(
+    <UsersList/>, document.getElementById('root')
+);
 
 // Что вернёт выражение: Array.isArray(usersList)?
 
