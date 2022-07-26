@@ -236,7 +236,7 @@ export default Monday_3;
 //         <main>
 //             <h4>User list:</h4>
 //             <ul>
-//                 { olderThen25Users.map(u => <User key={u.id} {...u}/>)}
+//                 {olderThen25Users.map(u => <User key={u.id} {...u}/>)}
 //             </ul>
 //         </main>
 //     )
@@ -311,40 +311,40 @@ export default Monday_3;
 
 //7.
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-
-function Button() {
-    return <button onClick={()=>alert()}>Click</button>                                       // () => alert()
-}
-
-
-ReactDOM.render(
-    <Button/>, document.getElementById('root')
-);
-
-// Что надо написать вместо ххх,
-// что бы на странице появился пустой alert при клике по кнопке?
-
-//8.
-
-// import React, {MouseEvent} from 'react';
+// import React from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
 //
+//
 // function Button() {
-//     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
-//         // console.log((typeof e) === ххх)                                               // 'object'
-//     }
-//     return <button onClick={onClickHandler} >Click</button>
+//     return <button onClick={()=>alert()}>Click</button>                                       // () => alert()
 // }
 //
 //
 // ReactDOM.render(
 //     <Button/>, document.getElementById('root')
 // );
+
+// Что надо написать вместо ххх,
+// что бы на странице появился пустой alert при клике по кнопке?
+
+//8.
+
+import React, {MouseEvent} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+function Button() {
+    const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
+    console.log((typeof e) === 'object')                                               // 'object'
+    }
+    return <button onClick={onClickHandler} >Click</button>
+}
+
+
+ReactDOM.render(
+    <Button/>, document.getElementById('root')
+);
 
 // Какой тип данных представляет аргумент функции-обработчика?
 // Что надо написать вместо ххх, что бы в консоль вывело true?

@@ -7,8 +7,7 @@ const Monday_4 = () => {
     );
 };
 
-export  default Monday_4;
-
+export default Monday_4;
 
 
 //==============================================================================================================================================================
@@ -34,7 +33,7 @@ export  default Monday_4;
 // function User(props: UserPropsType) {
 //     return (
 //         <li>
-//             {/*<button onClick={() => props.deleteUser(xxx)}>x</button>*/}
+//             <button onClick={() => props.deleteUser(props.id)}>x</button>
 //             User {props.name}: {props.age} y.o.
 //         </li>
 //     )
@@ -92,7 +91,7 @@ export  default Monday_4;
 //     const deleteUser = () => props.deleteUser(props.id)
 //     return (
 //         <li>
-//             {/*<button onClick={xxx}>Delete</button>*/}
+//             <button onClick={deleteUser}>Delete</button>
 //             User {props.name}: {props.age} y.o.
 //         </li>
 //     )
@@ -138,8 +137,8 @@ export  default Monday_4;
 //
 // function Post() {
 //     const onClickHandler = (e: MouseEvent<HTMLAnchorElement>) => {
-//         // xxx
-//         alert("Летим-бомбим!!!")
+//         e.preventDefault();
+//         alert('Летим-бомбим!!!')
 //     }
 //     return (
 //         <div>
@@ -150,9 +149,7 @@ export  default Monday_4;
 //                     Google ждёт тебя в цифровом рабстве!
 //                     Cтавь лайк и полетели!!!
 //                 </p>
-//                 <a href={"https://www.youtube.com/"}
-//                    onClick={onClickHandler}
-//                 >В этом месте подробнее...</a>
+//                 <a href={'https://www.youtube.com/'} onClick={onClickHandler}>В этом месте подробнее...</a>
 //             </article>
 //         </div>
 //     )
@@ -173,7 +170,7 @@ export  default Monday_4;
 //
 // function AuthForm() {
 //     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
-//         // xxx
+//         e.preventDefault();
 //         alert()
 //     }
 //     return (
@@ -215,7 +212,7 @@ export  default Monday_4;
 //
 // function User() {
 //     const [userName, setUserName] = useState<string>("")
-//     // const onChangeHandler = (e: xxx )=> setUserName(e.currentTarget.value)
+//     const onChangeHandler = (e: ChangeEvent<HTMLInputElement> )=> setUserName(e.currentTarget.value)
 //     return (
 //         <div>
 //             <p>{userName}</p>
@@ -245,7 +242,7 @@ export  default Monday_4;
 //         <div>
 //             <p>{userName}</p>
 //             <input
-//                 // xxx
+//                 value={userName}
 //                 onChange={(e) => setUserName(e.currentTarget.value)}
 //             />
 //         </div>
@@ -267,14 +264,16 @@ export  default Monday_4;
 // function User() {
 //     const [userName, setUserName] = useState<string>("")
 //     const [text, setText] = useState<string>("")
+//
 //     const onChangeHandler = (e: ChangeEvent<HTMLInputElement> )=> setUserName(e.currentTarget.value)
+//
 //     return (
 //         <div>
 //             <input
 //                 value={userName}
 //                 onChange={onChangeHandler}
 //                 onBlur={()=> {
-//                     // xxx
+//   //                setUserName('')
 //                     setText(userName)
 //                 }}
 //             />
@@ -287,8 +286,7 @@ export  default Monday_4;
 //     <User/>, document.getElementById('root')
 // );
 
-// Что надо написать вместо ххх,
-// чтобы после вывода текста в параграф содержимое формы ввода очищалось?
+// Что надо написать вместо ххх, чтобы после вывода текста в параграф содержимое формы ввода очищалось?
 
 //8.
 
@@ -310,7 +308,7 @@ export  default Monday_4;
 //             <textarea
 //                 value={newNote}
 //                 onChange={onChangeHandler}
-//                 // xxx = {addNote}
+//                 onBlur = {addNote}
 //             />
 //             <h4>Notes:</h4>
 //             <div>
@@ -324,20 +322,22 @@ export  default Monday_4;
 //     <Notes/>, document.getElementById('root')
 // );
 
-// Что надо написать вместо ххх,
-// чтобы при потере инпутом фокуса добавлялась заметка?
+// Что надо написать вместо ххх, чтобы при потере инпутом фокуса добавлялась заметка?
 
 //9.
 
-// import React, {useState, MouseEvent, ChangeEvent} from 'react';
+// import React, {ChangeEvent, useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
 //
 // function Notes() {
 //     const [newNote, setNewNote] = useState<string>("")
+//
 //     const [notes, setNotes] = useState<Array<string>>([])
+//
 //     const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement> )=>
 //         setNewNote(e.currentTarget.value)
+//
 //     const addNote = () => {
 //         setNotes([newNote, ...notes])
 //         setNewNote("")
@@ -351,7 +351,7 @@ export  default Monday_4;
 //             />
 //             <div>
 //                 <button
-//                     // onClick={xxx}
+//                     onClick={()=>{setNewNote('')}}
 //                 >Clear notes list</button>
 //             </div>
 //             <h4>Notes:</h4>
@@ -366,7 +366,6 @@ export  default Monday_4;
 //     <Notes/>, document.getElementById('root')
 // );
 
-// Что надо написать вместо ххх,
-// чтобы при клике список заметок очищался?
+// Что надо написать вместо ххх, чтобы при клике список заметок очищался?
 
 
