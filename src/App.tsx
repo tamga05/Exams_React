@@ -6,6 +6,7 @@ import Monday_2 from './components/Monday_2';
 import Monday_3 from './components/Monday_3';
 import Monday_4 from './components/Monday_4';
 import Monday_TOTAL from './components/Monday_TOTAL';
+import Tuesday_1 from './components/Tuesday_1';
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
             <Monday_3/>
             <Monday_4/>
             <Monday_TOTAL/>
+            <Tuesday_1/>
 
         </div>
     );

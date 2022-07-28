@@ -16,63 +16,6 @@ export default Monday_4;
 
 //1.
 
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-type UserType = {
-    id: number
-    name: string
-    age: number
-}
-
-type UserPropsType = UserType & {
-    deleteUser: (id: number) => void
-}
-
-function User(props: UserPropsType) {
-    return (
-        <li>
-            <button onClick={() => props.deleteUser(props.id)}>x</button>
-            User {props.name}: {props.age} y.o.
-        </li>
-    )
-}
-
-function UsersList() {
-    const data: Array<UserType> = [
-        {id: 1, name: "Bob", age: 25},
-        {id: 2, name: "Alex", age: 28},
-        {id: 3, name: "Ann", age: 23},
-        {id: 4, name: "John", age: 30},
-    ]
-    const [users, setUsers] = useState<Array<UserType>>(data)
-    const deleteUser = (userID: number) => {
-        const filteredUsers = users.filter(u => u.id !== userID)
-        setUsers(filteredUsers)
-    }
-    return (
-        <main>
-            <h4>User list:</h4>
-            <ul>
-                {users.map(u => <User
-                    key={u.id}
-                    {...u}
-                    deleteUser={deleteUser}
-                />)}
-            </ul>
-        </main>
-    )
-}
-
-ReactDOM.render(
-    <UsersList/>, document.getElementById('root')
-);
-
-// Что надо написать вместо xxx, чтобы код работал?
-
-//2.
-
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
@@ -88,10 +31,9 @@ ReactDOM.render(
 // }
 //
 // function User(props: UserPropsType) {
-//     const deleteUser = () => props.deleteUser(props.id)
 //     return (
 //         <li>
-//             <button onClick={deleteUser}>Delete</button>
+//             <button onClick={() => props.deleteUser(props.id)}>x</button>
 //             User {props.name}: {props.age} y.o.
 //         </li>
 //     )
@@ -106,8 +48,8 @@ ReactDOM.render(
 //     ]
 //     const [users, setUsers] = useState<Array<UserType>>(data)
 //     const deleteUser = (userID: number) => {
-//         const updatedUsers = users.filter(u => u.id !== userID)
-//         setUsers(updatedUsers)
+//         const filteredUsers = users.filter(u => u.id !== userID)
+//         setUsers(filteredUsers)
 //     }
 //     return (
 //         <main>
@@ -129,6 +71,64 @@ ReactDOM.render(
 
 // Что надо написать вместо xxx, чтобы код работал?
 
+//2.
+
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+type UserType = {
+    id: number
+    name: string
+    age: number
+}
+
+type UserPropsType = UserType & {
+    deleteUser: (id: number) => void
+}
+
+function User(props: UserPropsType) {
+    const deleteUser = () => props.deleteUser(props.id)
+    return (
+        <li>
+            <button onClick={deleteUser}>Delete</button>
+            User {props.name}: {props.age} y.o.
+        </li>
+    )
+}
+
+function UsersList() {
+    const data: Array<UserType> = [
+        {id: 1, name: "Bob", age: 25},
+        {id: 2, name: "Alex", age: 28},
+        {id: 3, name: "Ann", age: 23},
+        {id: 4, name: "John", age: 30},
+    ]
+    const [users, setUsers] = useState<Array<UserType>>(data)
+    const deleteUser = (userID: number) => {
+        const updatedUsers = users.filter(u => u.id !== userID)
+        setUsers(updatedUsers)
+    }
+    return (
+        <main>
+            <h4>User list:</h4>
+            <ul>
+                {users.map(u => <User
+                    key={u.id}
+                    {...u}
+                    deleteUser={deleteUser}
+                />)}
+            </ul>
+        </main>
+    )
+}
+
+ReactDOM.render(
+    <UsersList/>, document.getElementById('root')
+);
+
+// Что надо написать вместо xxx, чтобы код работал?
+
 //3.
 
 // import React, {useState, MouseEvent} from 'react';
@@ -137,7 +137,7 @@ ReactDOM.render(
 //
 // function Post() {
 //     const onClickHandler = (e: MouseEvent<HTMLAnchorElement>) => {
-//         e.preventDefault();
+//         e.preventDefault()
 //         alert('Летим-бомбим!!!')
 //     }
 //     return (
@@ -170,7 +170,7 @@ ReactDOM.render(
 //
 // function AuthForm() {
 //     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
-//         e.preventDefault();
+//         e.preventDefault()
 //         alert()
 //     }
 //     return (
@@ -331,17 +331,18 @@ ReactDOM.render(
 // import './index.css';
 //
 // function Notes() {
-//     const [newNote, setNewNote] = useState<string>("")
 //
+//     const [newNote, setNewNote] = useState<string>('')
 //     const [notes, setNotes] = useState<Array<string>>([])
 //
-//     const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement> )=>
+//     const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) =>
 //         setNewNote(e.currentTarget.value)
 //
 //     const addNote = () => {
 //         setNotes([newNote, ...notes])
-//         setNewNote("")
+//         setNewNote('')
 //     }
+//
 //     return (
 //         <div>
 //             <textarea
@@ -349,12 +350,16 @@ ReactDOM.render(
 //                 onChange={onChangeHandler}
 //                 onBlur={addNote}
 //             />
+//
 //             <div>
 //                 <button
-//                     onClick={()=>{setNewNote('')}}
-//                 >Clear notes list</button>
+//                     onClick={() => setNotes([])}
+//                 >Clear notes list
+//                 </button>
 //             </div>
+//
 //             <h4>Notes:</h4>
+//
 //             <div>
 //                 {notes.map(n => <p>{n}</p>)}
 //             </div>

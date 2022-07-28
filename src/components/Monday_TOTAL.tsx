@@ -24,7 +24,7 @@ export default MondayTotal;
 // export const User: React.FC<UserPropsType> = (props) => {
 //     return <div>
 //         <h1>Имя: {props.name}</h1>
-//         //<div>Описание: {ххх}</div>
+//         //<div>Описание: {props.description}</div>
 //     </div>
 // }
 
@@ -38,7 +38,7 @@ export default MondayTotal;
 //     avatarUrl: string
 // }
 // const Page: React.FC<PagePropsType> = (props) => {
-//     return <User a={xxx} n={yyy} />
+//     return <User a={props.age} n={props.name} />
 // }
 // type UserPropsType = {
 //     a: number
@@ -69,8 +69,8 @@ export default MondayTotal;
 //     ]
 //
 //     return <div>
-//         <UserWallet wallet={xxx} />
-//         <UserWallet wallet={yyy} />
+//         <UserWallet wallet={wallets[0]} />
+//         <UserWallet wallet={wallets[1]} />
 //     </div>
 // }
 
@@ -101,7 +101,7 @@ export default MondayTotal;
 //
 // export const App = () => {
 //     return <div>
-//         <Granny XXX={'Бабуля'} YYY={'Батя'} ZZZ={'Сын'}/>
+//         <Granny name={'Бабуля'} fatherName={'Батя'} sonName={'Сын'}/>
 //     </div>
 // }
 //
@@ -183,7 +183,7 @@ export default MondayTotal;
 //         {id: 4, userName: "John", age: 23},
 //     ]
 //
-//     const [usersList, setUsersList] = useState<Array<UserType>>(XXX)
+//     const [usersList, setUsersList] = useState<Array<UserType>>(state)
 //     return (
 //         <main>
 //             <h5>User list:</h5>
@@ -225,7 +225,7 @@ export default MondayTotal;
 //     ]
 //     const [users, setUsers] = useState<Array<UserType>>(data)
 //     // Пользователи старше 25 лет:
-//     // const olderThen25Users = users.xxx(u => u.age > 25)
+//     const olderThen25Users = users.filter(u => u.age > 25)
 //     return (
 //         <main>
 //             <h4>User list:</h4>
@@ -250,7 +250,7 @@ export default MondayTotal;
 //
 // function Button() {
 //     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
-//         // console.log((typeof e) === ххх)
+//         console.log((typeof e) === 'object')
 //     }
 //     return <button onClick={onClickHandler} >Click</button>
 // }
@@ -282,7 +282,7 @@ export default MondayTotal;
 // function User(props: UserPropsType) {
 //     return (
 //         <li>
-//             {/*<button onClick={() => props.deleteUser(xxx)}>x</button>*/}
+//             <button onClick={() => props.deleteUser(props.id)}>x</button>
 //             User {props.name}: {props.age} y.o.
 //         </li>
 //     )
@@ -332,7 +332,7 @@ export default MondayTotal;
 //         <div>
 //             <p>{userName}</p>
 //             <input
-//                 // xxx
+//                 value={userName}
 //                 onChange={(e) => setUserName(e.currentTarget.value)}
 //             />
 //         </div>
@@ -354,12 +354,15 @@ export default MondayTotal;
 // function Notes() {
 //     const [newNote, setNewNote] = useState<string>("")
 //     const [notes, setNotes] = useState<Array<string>>([])
+//
 //     const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement> )=>
 //         setNewNote(e.currentTarget.value)
+//
 //     const addNote = () => {
 //         setNotes([newNote, ...notes])
 //         setNewNote("")
 //     }
+//
 //     return (
 //         <div>
 //             <textarea
@@ -369,7 +372,7 @@ export default MondayTotal;
 //             />
 //             <div>
 //                 <button
-//                     onClick={()=>setNewNote("")}
+//                     onClick={()=>setNotes([])}
 //                 >Clear notes list</button>
 //             </div>
 //             <h4>Notes:</h4>
