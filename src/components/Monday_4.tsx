@@ -164,41 +164,41 @@ export default Monday_4;
 
 //4.
 
-import React, {MouseEvent} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-function AuthForm() {
-    const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault()
-        alert()
-    }
-    return (
-        <form>
-            <div>
-                <label style={{padding: "10px 0"}}>
-                    Name:
-                    <input type={"email"} name={"email"}/>
-                </label>
-            </div>
-            <div>
-                <label style={{padding: "10px 0"}}>
-                    Password:
-                    <input type={"password"} name={"password"}/>
-                </label>
-            </div>
-            <button
-                onClick={onClickHandler}
-                type={"submit"}>
-                Log in
-            </button>
-        </form>
-    )
-}
-
-ReactDOM.render(
-    <AuthForm/>, document.getElementById('root')
-);
+// import React, {MouseEvent} from 'react';
+// import ReactDOM from 'react-dom';
+// import './index.css';
+//
+// function AuthForm() {
+//     const onClickHandler = (e: MouseEvent<HTMLButtonElement>) => {
+//         e.preventDefault()
+//         alert()
+//     }
+//     return (
+//         <form>
+//             <div>
+//                 <label style={{padding: "10px 0"}}>
+//                     Name:
+//                     <input type={"email"} name={"email"}/>
+//                 </label>
+//             </div>
+//             <div>
+//                 <label style={{padding: "10px 0"}}>
+//                     Password:
+//                     <input type={"password"} name={"password"}/>
+//                 </label>
+//             </div>
+//             <button
+//                 onClick={onClickHandler}
+//                 type={"submit"}>
+//                 Log in
+//             </button>
+//         </form>
+//     )
+// }
+//
+// ReactDOM.render(
+//     <AuthForm/>, document.getElementById('root')
+// );
 
 // Что надо написать вместо ххх, чтобы данные из формы
 // не отправлялись на сервер и страница не перезагружалась
@@ -206,26 +206,26 @@ ReactDOM.render(
 
 //5.
 
-// import React, {useState, MouseEvent, ChangeEvent} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// function User() {
-//     const [userName, setUserName] = useState<string>("")
-//     const onChangeHandler = (e: ChangeEvent<HTMLInputElement> )=> setUserName(e.currentTarget.value)
-//     return (
-//         <div>
-//             <p>{userName}</p>
-//             <input
-//                 // onChange={onChangeHandler}
-//             />
-//         </div>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <User/>, document.getElementById('root')
-// );
+import React, {ChangeEvent, useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+function User() {
+    const [userName, setUserName] = useState<string>('')
+    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => setUserName(e.currentTarget.value)
+    return (
+        <div>
+            <p>{userName}</p>
+            <input
+                onChange={onChangeHandler}
+            />
+        </div>
+    )
+}
+
+ReactDOM.render(
+    <User/>, document.getElementById('root')
+);
 
 // Что надо написать вместо ххх, чтобы правильно типизировать
 // параметр функции?
