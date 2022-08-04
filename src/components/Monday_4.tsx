@@ -206,44 +206,18 @@ export default Monday_4;
 
 //5.
 
-import React, {ChangeEvent, useState} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-function User() {
-    const [userName, setUserName] = useState<string>('')
-    const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => setUserName(e.currentTarget.value)
-    return (
-        <div>
-            <p>{userName}</p>
-            <input
-                onChange={onChangeHandler}
-            />
-        </div>
-    )
-}
-
-ReactDOM.render(
-    <User/>, document.getElementById('root')
-);
-
-// Что надо написать вместо ххх, чтобы правильно типизировать
-// параметр функции?
-
-//6.
-
-// import React, {useState, MouseEvent, ChangeEvent} from 'react';
+// import React, {ChangeEvent, useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
 //
 // function User() {
-//     const [userName, setUserName] = useState<string>("")
+//     const [userName, setUserName] = useState<string>('')
+//     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => setUserName(e.currentTarget.value)
 //     return (
 //         <div>
 //             <p>{userName}</p>
 //             <input
-//                 value={userName}
-//                 onChange={(e) => setUserName(e.currentTarget.value)}
+//                 onChange={onChangeHandler}
 //             />
 //         </div>
 //     )
@@ -252,6 +226,32 @@ ReactDOM.render(
 // ReactDOM.render(
 //     <User/>, document.getElementById('root')
 // );
+
+// Что надо написать вместо ххх, чтобы правильно типизировать
+// параметр функции?
+
+//6.
+
+import React, {useState, MouseEvent, ChangeEvent} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+function User() {
+    const [userName, setUserName] = useState<string>("")
+    return (
+        <div>
+            <p>{userName}</p>
+            <input
+                value={userName}
+                onChange={(e) => setUserName(e.currentTarget.value)}
+            />
+        </div>
+    )
+}
+
+ReactDOM.render(
+    <User/>, document.getElementById('root')
+);
 
 // Что надо написать вместо ххх, чтобы инпут был контролируемым?
 
