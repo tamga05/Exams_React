@@ -290,78 +290,29 @@ export default Monday_4;
 
 //8.
 
-import React, {ChangeEvent, useState} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-function Notes() {
-    const [newNote, setNewNote] = useState<string>("")
-    const [notes, setNotes] = useState<Array<string>>([])
-    const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement> )=>
-        setNewNote(e.currentTarget.value)
-    const addNote = () => {
-        setNotes([newNote, ...notes])
-        setNewNote("")
-    }
-    return (
-        <div>
-            <textarea
-                value={newNote}
-                onChange={onChangeHandler}
-                onBlur = {addNote}
-            />
-            <h4>Notes:</h4>
-            <div>
-                {notes.map((n,i )=> <p key={i}>{n}</p>)}
-            </div>
-        </div>
-    )
-}
-
-ReactDOM.render(
-    <Notes/>, document.getElementById('root')
-);
-
-// Что надо написать вместо ххх, чтобы при потере инпутом фокуса добавлялась заметка?
-
-//9.
-
 // import React, {ChangeEvent, useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
 //
 // function Notes() {
-//
-//     const [newNote, setNewNote] = useState<string>('')
+//     const [newNote, setNewNote] = useState<string>("")
 //     const [notes, setNotes] = useState<Array<string>>([])
-//
-//     const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) =>
+//     const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement> )=>
 //         setNewNote(e.currentTarget.value)
-//
 //     const addNote = () => {
 //         setNotes([newNote, ...notes])
-//         setNewNote('')
+//         setNewNote("")
 //     }
-//
 //     return (
 //         <div>
 //             <textarea
 //                 value={newNote}
 //                 onChange={onChangeHandler}
-//                 onBlur={addNote}
+//                 onBlur = {addNote}
 //             />
-//
-//             <div>
-//                 <button
-//                     onClick={() => setNotes([])}
-//                 >Clear notes list
-//                 </button>
-//             </div>
-//
 //             <h4>Notes:</h4>
-//
 //             <div>
-//                 {notes.map(n => <p>{n}</p>)}
+//                 {notes.map((n,i )=> <p key={i}>{n}</p>)}
 //             </div>
 //         </div>
 //     )
@@ -370,6 +321,55 @@ ReactDOM.render(
 // ReactDOM.render(
 //     <Notes/>, document.getElementById('root')
 // );
+
+// Что надо написать вместо ххх, чтобы при потере инпутом фокуса добавлялась заметка?
+
+//9.
+
+import React, {ChangeEvent, useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+function Notes() {
+
+    const [newNote, setNewNote] = useState<string>('')
+    const [notes, setNotes] = useState<Array<string>>([])
+
+    const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) =>
+        setNewNote(e.currentTarget.value)
+
+    const addNote = () => {
+        setNotes([newNote, ...notes])
+        setNewNote('')
+    }
+
+    return (
+        <div>
+            <textarea
+                value={newNote}
+                onChange={onChangeHandler}
+                onBlur={addNote}
+            />
+
+            <div>
+                <button
+                    onClick={() => setNotes([])}
+                >Clear notes list
+                </button>
+            </div>
+
+            <h4>Notes:</h4>
+
+            <div>
+                {notes.map(n => <p>{n}</p>)}
+            </div>
+        </div>
+    )
+}
+
+ReactDOM.render(
+    <Notes/>, document.getElementById('root')
+);
 
 // Что надо написать вместо ххх, чтобы при клике список заметок очищался?
 
