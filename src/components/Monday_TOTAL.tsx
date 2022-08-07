@@ -17,36 +17,36 @@ export default MondayTotal;
 
 //1.
 
-type UserPropsType = {
-    name: string
-    description: string
-}
-export const User: React.FC<UserPropsType> = (props) => {
-    return <div>
-        <h1>Имя: {props.name}</h1>
-        //<div>Описание: {props.description}</div>
-    </div>
-}
+// type UserPropsType = {
+//     name: string
+//     description: string
+// }
+// export const User: React.FC<UserPropsType> = (props) => {
+//     return <div>
+//         <h1>Имя: {props.name}</h1>
+//         //<div>Описание: {props.description}</div>
+//     </div>
+// }
 
 //Что нужно написать вместо ххх, что бы код работал?
 
 //2.
 
-// type PagePropsType = {
-//     age: number
-//     name: string
-//     avatarUrl: string
-// }
-// const Page: React.FC<PagePropsType> = (props) => {
-//     return <User a={props.age} n={props.name} />
-// }
-// type UserPropsType = {
-//     a: number
-//     n: string
-// }
-// export const User: React.FC<UserPropsType> = (props) => {
-//     return <div>name: {props.n}, age: {props.a}</div>
-// }
+type PagePropsType = {
+    age: number
+    name: string
+    avatarUrl: string
+}
+const Page: React.FC<PagePropsType> = (props) => {
+    return <User a={props.age} n={props.name} />
+}
+type UserPropsType = {
+    a: number
+    n: string
+}
+export const User: React.FC<UserPropsType> = (props) => {
+    return <div>name: {props.n}, age: {props.a}</div>
+}
 
 //3.
 
