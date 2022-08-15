@@ -32,47 +32,47 @@ export default MondayTotal;
 
 //2.
 
-type PagePropsType = {
-    age: number
-    name: string
-    avatarUrl: string
-}
-const Page: React.FC<PagePropsType> = (props) => {
-    return <User a={props.age} n={props.name} />
-}
-type UserPropsType = {
-    a: number
-    n: string
-}
-export const User: React.FC<UserPropsType> = (props) => {
-    return <div>name: {props.n}, age: {props.a}</div>
-}
+// type PagePropsType = {
+//     age: number
+//     name: string
+//     avatarUrl: string
+// }
+// const Page: React.FC<PagePropsType> = (props) => {
+//     return <User a={props.age} n={props.name} />
+// }
+// type UserPropsType = {
+//     a: number
+//     n: string
+// }
+// export const User: React.FC<UserPropsType> = (props) => {
+//     return <div>name: {props.n}, age: {props.a}</div>
+// }
 
 //3.
 
-// type UserWalletType = {
-//     title: string
-//     amount: number
-// }
-// type UserWalletPropsType = {
-//     wallet: UserWalletType
-// }
-//
-// export const UserWallet: React.FC<UserWalletPropsType> = (props) => {
-//     return <div>title: {props.wallet.title}, amount: {props.wallet.amount}</div>
-// }
-//
-// export const UserMoney = () => {
-//     const wallets = [
-//         {title: 'bitcoin', amount: 1},
-//         {title: '$', amount: 100}
-//     ]
-//
-//     return <div>
-//         <UserWallet wallet={wallets[0]} />
-//         <UserWallet wallet={wallets[1]} />
-//     </div>
-// }
+type UserWalletType = {
+    title: string
+    amount: number
+}
+type UserWalletPropsType = {
+    wallet: UserWalletType
+}
+
+export const UserWallet: React.FC<UserWalletPropsType> = (props) => {
+    return <div>title: {props.wallet.title}, amount: {props.wallet.amount}</div>
+}
+
+export const UserMoney = () => {
+    const wallets = [
+        {title: 'bitcoin', amount: 1},
+        {title: '$', amount: 100}
+    ]
+
+    return <div>
+        <UserWallet wallet={wallets[0]} />
+        <UserWallet wallet={wallets[1]} />
+    </div>
+}
 
 //4.
 
