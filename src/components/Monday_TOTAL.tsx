@@ -32,21 +32,21 @@ export default MondayTotal;
 
 //2.
 
-type PagePropsType = {
-    age: number
-    name: string
-    avatarUrl: string
-}
-const Page: React.FC<PagePropsType> = (props) => {
-    return <User a={props.age} n={props.name} />
-}
-type UserPropsType = {
-    a: number
-    n: string
-}
-export const User: React.FC<UserPropsType> = (props) => {
-    return <div>name: {props.n}, age: {props.a}</div>
-}
+// type PagePropsType = {
+//     age: number
+//     name: string
+//     avatarUrl: string
+// }
+// const Page: React.FC<PagePropsType> = (props) => {
+//     return <User a={props.age} n={props.name} />
+// }
+// type UserPropsType = {
+//     a: number
+//     n: string
+// }
+// export const User: React.FC<UserPropsType> = (props) => {
+//     return <div>name: {props.n}, age: {props.a}</div>
+// }
 
 //3.
 
@@ -76,38 +76,38 @@ export const User: React.FC<UserPropsType> = (props) => {
 
 //4.
 
-// import ReactDOM from 'react-dom'
-//
-// const Son = (props: any) => {
-//     return <div>
-//         I am son. My name is {props.name}
-//     </div>
-// }
-//
-//
-// const Father = (props: any) => {
-//     return <div>
-//         I am father. My name is {props.name}
-//         <Son name={props.sonName} />
-//     </div>
-// }
-//
-// const Granny = (props: any) => {
-//     return <div>
-//         I am granny. My name is {props.name}
-//         <Father name={props.fatherName} sonName={props.sonName} />
-//     </div>
-// }
-//
-// export const App = () => {
-//     return <div>
-//         <Granny name={'Бабуля'} fatherName={'Батя'} sonName={'Сын'}/>
-//     </div>
-// }
-//
-// ReactDOM.render(<App/>,
-//     document.getElementById('root')
-// )
+import ReactDOM from 'react-dom'
+
+const Son = (props: any) => {
+    return <div>
+        I am son. My name is {props.name}
+    </div>
+}
+
+
+const Father = (props: any) => {
+    return <div>
+        I am father. My name is {props.name}
+        <Son name={props.sonName} />
+    </div>
+}
+
+const Granny = (props: any) => {
+    return <div>
+        I am granny. My name is {props.name}
+        <Father name={props.fatherName} sonName={props.sonName} />
+    </div>
+}
+
+export const App = () => {
+    return <div>
+        <Granny name={'Бабуля'} fatherName={'Батя'} sonName={'Сын'}/>
+    </div>
+}
+
+ReactDOM.render(<App/>,
+    document.getElementById('root')
+)
 
 //5.
 
