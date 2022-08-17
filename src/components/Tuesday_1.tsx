@@ -11,7 +11,6 @@ const Tuesday_1 = () => {
 export default Tuesday_1;
 
 
-
 //==============================================================================================================================================================
 // Экзамены. Вторник 1-неделя.
 //==============================================================================================================================================================
@@ -28,8 +27,8 @@ export default Tuesday_1;
 //
 //     return (
 //         <button
-//             style={{ backgroundColor: `${ isColored ? "red": ""}`}}
-//             onClick={()=>setIsColored(true)}
+//             style={{backgroundColor: `${isColored ? 'red' : ''}`}}                       // isColored
+//             onClick={() => setIsColored(true)}
 //         >
 //             Меняю цвет по клику
 //         </button>
@@ -51,14 +50,12 @@ export default Tuesday_1;
 //
 //
 // function UsersList() {
+//
 //     const [users, setUsers] = useState<Array<string>>(["Bob", "Alex", "Ann"])
+//
 //     const getUser = (user: string, i: number) => <li key={i}>{user}</li>
 //
-//     const usersList = (XXX === 0)
-//         ? <p>List is empty</p>
-//         :  <ul>
-//             { users.map(getUser)}
-//         </ul>
+//     const usersList = (XXX === 0) ? <p>List is empty</p> : <ul>{ users.map(getUser)}</ul>
 //
 //     return (
 //         <main>
