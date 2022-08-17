@@ -76,59 +76,59 @@ export default MondayTotal;
 
 //4.
 
-import ReactDOM from 'react-dom'
-
-const Son = (props: any) => {
-    return <div>
-        I am son. My name is {props.name}
-    </div>
-}
-
-
-const Father = (props: any) => {
-    return <div>
-        I am father. My name is {props.name}
-        <Son name={props.sonName} />
-    </div>
-}
-
-const Granny = (props: any) => {
-    return <div>
-        I am granny. My name is {props.name}
-        <Father name={props.fatherName} sonName={props.sonName} />
-    </div>
-}
-
-export const App = () => {
-    return <div>
-        <Granny name={'Бабуля'} fatherName={'Батя'} sonName={'Сын'}/>
-    </div>
-}
-
-ReactDOM.render(<App/>,
-    document.getElementById('root')
-)
+// import ReactDOM from 'react-dom'
+//
+// const Son = (props: any) => {
+//     return <div>
+//         I am son. My name is {props.name}
+//     </div>
+// }
+//
+//
+// const Father = (props: any) => {
+//     return <div>
+//         I am father. My name is {props.name}
+//         <Son name={props.sonName} />
+//     </div>
+// }
+//
+// const Granny = (props: any) => {
+//     return <div>
+//         I am granny. My name is {props.name}
+//         <Father name={props.fatherName} sonName={props.sonName} />
+//     </div>
+// }
+//
+// export const App = () => {
+//     return <div>
+//         <Granny name={'Бабуля'} fatherName={'Батя'} sonName={'Сын'}/>
+//     </div>
+// }
+//
+// ReactDOM.render(<App/>,
+//     document.getElementById('root')
+// )
 
 //5.
 
-// import React, {useState} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-// function UsersList() {
-//     const results = useState<Array<string>>(["Bob", "Alex", "Ann"])
-//
-//     const users = results[0]
-//     const setUsers = results[1]
-//
-//     return (
-//         <p>Тут будет список пользователей</p>
-//     )
-// }
-//
-// ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
-// );
+import {useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+function UsersList() {
+    const results = useState<Array<string>>(["Bob", "Alex", "Ann"])
+
+    const users = results[0]
+    const setUsers = results[1]
+
+    return (
+        <p>Тут будет список пользователей</p>
+    )
+}
+
+ReactDOM.render(
+    <UsersList/>, document.getElementById('root')
+);
 
 // Чему равно results.length?
 
