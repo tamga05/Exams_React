@@ -17,59 +17,59 @@ export default Tuesday_1;
 
 //1.
 
-import React, {useState, MouseEvent} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-
-function ColorButton() {
-    const [isColored, setIsColored] = useState<boolean>(false)
-
-    return (
-        <button
-            style={{backgroundColor: `${isColored ? 'red' : ''}`}}                       // isColored
-            onClick={() => setIsColored(true)}
-        >
-            Меняю цвет по клику
-        </button>
-    )
-}
-
-
-ReactDOM.render(
-    <ColorButton/>, document.getElementById('root')
-);
-
-// Что надо написать вместо XXX, чтобы при клике кнопка становилась красной?
-
-//2.
-
-// import React, {useState} from 'react';
+// import React, {useState, MouseEvent} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
 //
 //
-// function UsersList() {
-//
-//     const [users, setUsers] = useState<Array<string>>(['Bob', 'Alex', 'Ann'])
-//
-//     const getUser = (user: string, i: number) => <li key={i}>{user}</li>
-//
-//     const usersList = (XXX === 0) ? <p>List is empty</p> : <ul>{users.map(getUser)}</ul>
+// function ColorButton() {
+//     const [isColored, setIsColored] = useState<boolean>(false)
 //
 //     return (
-//         <main>
-//             <button onClick={() => setUsers([])}>Clear list</button>
-//             <h4>User list:</h4>
-//             {usersList}
-//         </main>
+//         <button
+//             style={{backgroundColor: `${isColored ? 'red' : ''}`}}                                  // isColored
+//             onClick={() => setIsColored(true)}
+//         >
+//             Меняю цвет по клику
+//         </button>
 //     )
 // }
 //
 //
 // ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
+//     <ColorButton/>, document.getElementById('root')
 // );
+
+// Что надо написать вместо XXX, чтобы при клике кнопка становилась красной?
+
+//2.
+
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+function UsersList() {
+
+    const [users, setUsers] = useState<Array<string>>(['Bob', 'Alex', 'Ann'])
+
+    const getUser = (user: string, i: number) => <li key={i}>{user}</li>
+
+    const usersList = (users.length === 0) ? <p>List is empty</p> : <ul>{users.map(getUser)}</ul>  // users.length
+
+    return (
+        <main>
+            <button onClick={() => setUsers([])}>Clear list</button>
+            <h4>User list:</h4>
+            {usersList}
+        </main>
+    )
+}
+
+
+ReactDOM.render(
+    <UsersList/>, document.getElementById('root')
+);
 
 // Что надо вставить вместо XXX, чтобы код корректно работал со списком пользователей?
 
@@ -81,6 +81,7 @@ ReactDOM.render(
 //
 //
 // function PasswordChecker() {
+//
 //     const [password, setPassword] = useState<string>("")
 //
 //     return (
@@ -88,11 +89,11 @@ ReactDOM.render(
 //             <p>Your password must have more than 8 charters!</p>
 //             <input
 //                 placeholder={"Enter your password"}
+//                 type={"password"}
 //                 value={password}
 //                 onChange={e => setPassword(e.currentTarget.value)}
-//                 type={"password"}
 //             />
-//             {XXX < 9 && <p style={{color: "red"}}>The password is too short!</p>}
+//             {password.length < 9 && <p style={{color: "red"}}>The password is too short!</p>}  // password.length
 //         </main>
 //     )
 // }
@@ -140,7 +141,7 @@ ReactDOM.render(
 //             />
 //             <div>
 //                 <button
-//                     disabled={XXX}
+//                     disabled={!isCommentReady}                                                            // !isCommentReady
 //                     onClick={onClickSendComment}>
 //                     Send comment
 //                 </button>
@@ -166,14 +167,15 @@ ReactDOM.render(
 //
 // function Colorize() {
 //
-//     const [color, setColor] = useState<string>("black")
-//     const colors = ["red", "yellow", "green", "blue", "violet", "chartreuse"]
+//     const [color, setColor] = useState<string>('black')
+//
+//     const colors = ['red', 'yellow', 'green', 'blue', 'violet', 'chartreuse']
 //
 //     const styles = {
-//         width: "100px",
-//         height: "100px",
-//         borderRadius: "50%",
-//         backgroundColor: "black"
+//         width: '100px',
+//         height: '100px',
+//         borderRadius: '50%',
+//         backgroundColor: 'black'
 //     }
 //
 //     const getColor = (colors: string[]) => {
@@ -186,7 +188,7 @@ ReactDOM.render(
 //             <div style={{...styles, backgroundColor: color}}/>
 //             <div>
 //                 <button
-//                     onClick={() => setColor(XXX)}
+//                     onClick={() => setColor(XXX)}                                                //
 //                 >
 //                     Get random color
 //                 </button>
