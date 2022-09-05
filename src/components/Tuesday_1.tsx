@@ -1,14 +1,14 @@
-import React from 'react';
-
-const Tuesday_1 = () => {
-    return (
-        <div>
-
-        </div>
-    );
-};
-
-export default Tuesday_1;
+// import React from 'react';
+//
+// const Tuesday_1 = () => {
+//     return (
+//         <div>
+//
+//         </div>
+//     );
+// };
+//
+// export default Tuesday_1;
 
 
 //==============================================================================================================================================================
@@ -44,64 +44,64 @@ export default Tuesday_1;
 
 //2.
 
-import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-
-function UsersList() {
-
-    const [users, setUsers] = useState<Array<string>>(['Bob', 'Alex', 'Ann'])
-
-    const getUser = (user: string, i: number) => <li key={i}>{user}</li>
-
-    const usersList = (users.length === 0) ? <p>List is empty</p> : <ul>{users.map(getUser)}</ul>  // users.length
-
-    return (
-        <main>
-            <button onClick={() => setUsers([])}>Clear list</button>
-            <h4>User list:</h4>
-            {usersList}
-        </main>
-    )
-}
-
-
-ReactDOM.render(
-    <UsersList/>, document.getElementById('root')
-);
-
-// Что надо вставить вместо XXX, чтобы код корректно работал со списком пользователей?
-
-//3.
-
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
 // import './index.css';
 //
 //
-// function PasswordChecker() {
+// function UsersList() {
 //
-//     const [password, setPassword] = useState<string>("")
+//     const [users, setUsers] = useState<Array<string>>(['Bob', 'Alex', 'Ann'])
+//
+//     const getUser = (user: string, i: number) => <li key={i}>{user}</li>
+//
+//     const usersList = (users.length === 0) ? <p>List is empty</p> : <ul>{users.map(getUser)}</ul>  // users.length
 //
 //     return (
 //         <main>
-//             <p>Your password must have more than 8 charters!</p>
-//             <input
-//                 placeholder={"Enter your password"}
-//                 type={"password"}
-//                 value={password}
-//                 onChange={e => setPassword(e.currentTarget.value)}
-//             />
-//             {password.length < 9 && <p style={{color: "red"}}>The password is too short!</p>}  // password.length
+//             <button onClick={() => setUsers([])}>Clear list</button>
+//             <h4>User list:</h4>
+//             {usersList}
 //         </main>
 //     )
 // }
 //
 //
 // ReactDOM.render(
-//     <PasswordChecker/>, document.getElementById('root')
+//     <UsersList/>, document.getElementById('root')
 // );
+
+// Что надо вставить вместо XXX, чтобы код корректно работал со списком пользователей?
+
+//3.
+
+import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+function PasswordChecker() {
+
+    const [password, setPassword] = useState<string>("")
+
+    return (
+        <main>
+            <p>Your password must have more than 8 charters!</p>
+            <input
+                placeholder={"Enter your password"}
+                type={"password"}
+                value={password}
+                onChange={e => setPassword(e.currentTarget.value)}
+            />
+            {password.length < 9 && <p style={{color: "red"}}>The password is too short!</p>}  // password.length
+        </main>
+    )
+}
+
+
+ReactDOM.render(
+    <PasswordChecker/>, document.getElementById('root')
+);
 
 // Что надо вставить вместо XXX, чтобы код работал нормально?
 
@@ -187,10 +187,7 @@ ReactDOM.render(
 //         <main>
 //             <div style={{...styles, backgroundColor: color}}/>
 //             <div>
-//                 <button
-//                     onClick={() => setColor(XXX)}                                                //
-//                 >
-//                     Get random color
+//                 <button onClick={() => setColor(() => getColor(colors))}>
 //                 </button>
 //             </div>
 //         </main>
@@ -278,6 +275,7 @@ ReactDOM.render(
 //     return <ul>
 //         {users.map(u => {
 //             return (
+//                 // u.XXX.length >= 5
 //                 u.personalData.technologies.length >= 5
 //                     ? <li key={u.id}>
 //                         {`User ${u.name}. ${u.personalData.age}. Ready to work.`}
