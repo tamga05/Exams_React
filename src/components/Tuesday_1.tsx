@@ -15,7 +15,7 @@
 // Экзамены. Вторник 1-неделя.
 //==============================================================================================================================================================
 
-//1.
+// 1.
 
 // import React, {useState, MouseEvent} from 'react';
 // import ReactDOM from 'react-dom';
@@ -42,7 +42,7 @@
 
 // Что надо написать вместо XXX, чтобы при клике кнопка становилась красной?
 
-//2.
+// 2.
 
 // import React, {useState} from 'react';
 // import ReactDOM from 'react-dom';
@@ -73,92 +73,91 @@
 
 // Что надо вставить вместо XXX, чтобы код корректно работал со списком пользователей?
 
-//3.
+// 3.
 
-import React, {useState} from 'react';
+// import React, {useState} from 'react';
+// import ReactDOM from 'react-dom';
+// import './index.css';
+//
+//
+// function PasswordChecker() {
+//
+//     const [password, setPassword] = useState<string>('')
+//
+//     return (
+//         <main>
+//             <p>Your password must have more than 8 charters!</p>
+//             <input
+//                 placeholder={'Enter your password'}
+//                 type={'password'}
+//                 value={password}
+//                 onChange={e => setPassword(e.currentTarget.value)}
+//             />
+//             {password.length < 9 && <p style={{color: 'red'}}>The password is too short!</p>}</main>                     // password.length
+//     )
+// }
+//
+//
+// ReactDOM.render(
+//     <PasswordChecker/>, document.getElementById('root')
+// );
+
+// Что надо вставить вместо XXX, чтобы код работал нормально?
+
+// 4.
+
+import React, { ChangeEvent, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
 
-function PasswordChecker() {
+function LongCommentChecker() {
+    const minSizeComment = 5
+    const [isCommentReady, setIsCommentReady] = useState<boolean>(false)
+    const [comment, setComment] = useState<string>('')
 
-    const [password, setPassword] = useState<string>("")
+    const onClickSendComment = () => {
+        if (comment.length > minSizeComment) {
+            setComment('')
+        }
+    }
+    const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
+        const newComment = e.currentTarget.value
+        if (newComment.length > minSizeComment) {
+            setIsCommentReady(true)
+        } else {
+            setIsCommentReady(false)
+        }
+        setComment(newComment)
+    }
 
     return (
         <main>
-            <p>Your password must have more than 8 charters!</p>
-            <input
-                placeholder={"Enter your password"}
-                type={"password"}
-                value={password}
-                onChange={e => setPassword(e.currentTarget.value)}
+            <textarea
+                placeholder={'Your comment must have more than 5 charters'}
+                value={comment}
+                onChange={onChangeHandler}
             />
-            {password.length < 9 && <p style={{color: "red"}}>The password is too short!</p>}  // password.length
+            <div>
+                <button
+                    disabled={!isCommentReady}                                                            // !isCommentReady
+                    onClick={onClickSendComment}>
+                    Send comment
+                </button>
+            </div>
         </main>
     )
 }
 
 
-ReactDOM.render(
-    <PasswordChecker/>, document.getElementById('root')
-);
-
-// Что надо вставить вместо XXX, чтобы код работал нормально?
-
-//4.
-
-// import React, { ChangeEvent, useState } from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-//
-// function LongCommentChecker() {
-//     const minSizeComment = 5
-//     const [isCommentReady, setIsCommentReady] = useState<boolean>(false)
-//     const [comment, setComment] = useState<string>('')
-//
-//     const onClickSendComment = () => {
-//         if (comment.length > minSizeComment) {
-//             setComment('')
-//         }
-//     }
-//     const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
-//         const newComment = e.currentTarget.value
-//         if (newComment.length > minSizeComment) {
-//             setIsCommentReady(true)
-//         } else {
-//             setIsCommentReady(false)
-//         }
-//         setComment(newComment)
-//     }
-//
-//     return (
-//         <main>
-//             <textarea
-//                 placeholder={'Your comment must have more than 5 charters'}
-//                 value={comment}
-//                 onChange={onChangeHandler}
-//             />
-//             <div>
-//                 <button
-//                     disabled={!isCommentReady}                                                            // !isCommentReady
-//                     onClick={onClickSendComment}>
-//                     Send comment
-//                 </button>
-//             </div>
-//         </main>
-//     )
-// }
-//
-//
-// ReactDOM.render(<LongCommentChecker/>, document.getElementById('root'));
+ReactDOM.render(<LongCommentChecker/>, document.getElementById('root'));
 
 // Что нужно написать вместо XXX, чтобы кнопка отправки комментария отрабатывала верно:
 // первоначально кнопка должна быть в состоянии disable, а после успешного выполнения условия
 // (проверка на длину комментария) должна раздизаблиться.
 // ❗ Ответ необходимо дать на основании данных (переменных), которые уже есть в коде
 
-//5.
+// 5.
 
 // import React, {ChangeEvent, useState} from 'react';
 // import ReactDOM from 'react-dom';
@@ -201,7 +200,7 @@ ReactDOM.render(
 
 // Что надо вставить вместо XXX, чтобы круг менял цвет по клику?
 
-//6.
+// 6.
 
 // import React, { ChangeEvent, useState } from 'react';
 // import ReactDOM from 'react-dom';
@@ -275,7 +274,6 @@ ReactDOM.render(
 //     return <ul>
 //         {users.map(u => {
 //             return (
-//                 // u.XXX.length >= 5
 //                 u.personalData.technologies.length >= 5
 //                     ? <li key={u.id}>
 //                         {`User ${u.name}. ${u.personalData.age}. Ready to work.`}
