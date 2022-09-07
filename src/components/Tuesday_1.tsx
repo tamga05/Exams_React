@@ -106,51 +106,51 @@
 
 // 4.
 
-import React, { ChangeEvent, useState } from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-
-function LongCommentChecker() {
-    const minSizeComment = 5
-    const [isCommentReady, setIsCommentReady] = useState<boolean>(false)
-    const [comment, setComment] = useState<string>('')
-
-    const onClickSendComment = () => {
-        if (comment.length > minSizeComment) {
-            setComment('')
-        }
-    }
-    const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        const newComment = e.currentTarget.value
-        if (newComment.length > minSizeComment) {
-            setIsCommentReady(true)
-        } else {
-            setIsCommentReady(false)
-        }
-        setComment(newComment)
-    }
-
-    return (
-        <main>
-            <textarea
-                placeholder={'Your comment must have more than 5 charters'}
-                value={comment}
-                onChange={onChangeHandler}
-            />
-            <div>
-                <button
-                    disabled={!isCommentReady}                                                            // !isCommentReady
-                    onClick={onClickSendComment}>
-                    Send comment
-                </button>
-            </div>
-        </main>
-    )
-}
-
-
-ReactDOM.render(<LongCommentChecker/>, document.getElementById('root'));
+// import React, { ChangeEvent, useState } from 'react';
+// import ReactDOM from 'react-dom';
+// import './index.css';
+//
+//
+// function LongCommentChecker() {
+//     const minSizeComment = 5
+//     const [isCommentReady, setIsCommentReady] = useState<boolean>(false)
+//     const [comment, setComment] = useState<string>('')
+//
+//     const onClickSendComment = () => {
+//         if (comment.length > minSizeComment) {
+//             setComment('')
+//         }
+//     }
+//     const onChangeHandler = (e: ChangeEvent<HTMLTextAreaElement>) => {
+//         const newComment = e.currentTarget.value
+//         if (newComment.length > minSizeComment) {
+//             setIsCommentReady(true)
+//         } else {
+//             setIsCommentReady(false)
+//         }
+//         setComment(newComment)
+//     }
+//
+//     return (
+//         <main>
+//             <textarea
+//                 placeholder={'Your comment must have more than 5 charters'}
+//                 value={comment}
+//                 onChange={onChangeHandler}
+//             />
+//             <div>
+//                 <button
+//                     disabled={!isCommentReady}                                                            // !isCommentReady
+//                     onClick={onClickSendComment}>
+//                     Send comment
+//                 </button>
+//             </div>
+//         </main>
+//     )
+// }
+//
+//
+// ReactDOM.render(<LongCommentChecker/>, document.getElementById('root'));
 
 // Что нужно написать вместо XXX, чтобы кнопка отправки комментария отрабатывала верно:
 // первоначально кнопка должна быть в состоянии disable, а после успешного выполнения условия
@@ -159,44 +159,44 @@ ReactDOM.render(<LongCommentChecker/>, document.getElementById('root'));
 
 // 5.
 
-// import React, {ChangeEvent, useState} from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-//
-// function Colorize() {
-//
-//     const [color, setColor] = useState<string>('black')
-//
-//     const colors = ['red', 'yellow', 'green', 'blue', 'violet', 'chartreuse']
-//
-//     const styles = {
-//         width: '100px',
-//         height: '100px',
-//         borderRadius: '50%',
-//         backgroundColor: 'black'
-//     }
-//
-//     const getColor = (colors: string[]) => {
-//         const nextColor = colors[Math.floor(Math.random() * colors.length)]
-//         return nextColor
-//     }
-//
-//     return (
-//         <main>
-//             <div style={{...styles, backgroundColor: color}}/>
-//             <div>
-//                 <button onClick={() => setColor(() => getColor(colors))}>
-//                 </button>
-//             </div>
-//         </main>
-//     )
-// }
-//
-//
-// ReactDOM.render(
-//     <Colorize/>, document.getElementById('root')
-// );
+import React, {ChangeEvent, useState} from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+function Colorize() {
+
+    const [color, setColor] = useState<string>('black')
+
+    const colors = ['red', 'yellow', 'green', 'blue', 'violet', 'chartreuse']
+
+    const styles = {
+        width: '100px',
+        height: '100px',
+        borderRadius: '50%',
+        backgroundColor: 'black'
+    }
+
+    const getColor = (colors: string[]) => {
+        const nextColor = colors[Math.floor(Math.random() * colors.length)]
+        return nextColor
+    }
+
+    return (
+        <main>
+            <div style={{...styles, backgroundColor: color}}/>
+            <div>
+                <button onClick={() => setColor(() => getColor(colors))}>
+                </button>
+            </div>
+        </main>
+    )
+}
+
+
+ReactDOM.render(
+    <Colorize/>, document.getElementById('root')
+);
 
 // Что надо вставить вместо XXX, чтобы круг менял цвет по клику?
 
