@@ -159,136 +159,136 @@
 
 // 5.
 
-import React, {ChangeEvent, useState} from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-
-
-function Colorize() {
-
-    const [color, setColor] = useState<string>('black')
-
-    const colors = ['red', 'yellow', 'green', 'blue', 'violet', 'chartreuse']
-
-    const styles = {
-        width: '100px',
-        height: '100px',
-        borderRadius: '50%',
-        backgroundColor: 'black'
-    }
-
-    const getColor = (colors: string[]) => {
-        const nextColor = colors[Math.floor(Math.random() * colors.length)]
-        return nextColor
-    }
-
-    return (
-        <main>
-            <div style={{...styles, backgroundColor: color}}/>
-            <div>
-                <button onClick={() => setColor(() => getColor(colors))}>
-                </button>
-            </div>
-        </main>
-    )
-}
-
-
-ReactDOM.render(
-    <Colorize/>, document.getElementById('root')
-);
+// import React, {ChangeEvent, useState} from 'react';
+// import ReactDOM from 'react-dom';
+// import './index.css';
+//
+//
+// function Colorize() {
+//
+//     const [color, setColor] = useState<string>('black')
+//
+//     const colors = ['red', 'yellow', 'green', 'blue', 'violet', 'chartreuse']
+//
+//     const styles = {
+//         width: '100px',
+//         height: '100px',
+//         borderRadius: '50%',
+//         backgroundColor: 'black'
+//     }
+//
+//     const getColor = (colors: string[]) => {
+//         const nextColor = colors[Math.floor(Math.random() * colors.length)]
+//         return nextColor
+//     }
+//
+//     return (
+//         <main>
+//             <div style={{...styles, backgroundColor: color}}/>
+//             <div>
+//                 <button onClick={() => setColor(() => getColor(colors))}>
+//                 </button>
+//             </div>
+//         </main>
+//     )
+// }
+//
+//
+// ReactDOM.render(
+//     <Colorize/>, document.getElementById('root')
+// );
 
 // Что надо вставить вместо XXX, чтобы круг менял цвет по клику?
 
 // 6.
 
-// import React, { ChangeEvent, useState } from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-//
-//
-// type UserType = {
-//     id: number
-//     name: string
-//     personalData: PersonalDataType
-// }
-// type PersonalDataType = {
-//     gender: string
-//     age: number
-//     technologies: Array<TechnologiesType>
-// }
-// type TechnologiesType = 'HTML' | 'CSS' | 'React' | 'JS/TS' | 'Redux'
-//
-//
-// function UsersList() {
-//
-//     const [users, setUsers] = useState<Array<UserType>>([
-//         {
-//             id: 1,
-//             name: 'Bob',
-//             personalData: {
-//                 gender: 'male',
-//                 age: 23,
-//                 technologies: ['HTML', 'CSS', 'React', 'JS/TS', 'Redux']
-//             }
-//         },
-//         {
-//             id: 2,
-//             name: 'Alex',
-//             personalData: {
-//                 gender: 'male',
-//                 age: 21,
-//                 technologies: ['HTML', 'CSS', 'React']
-//             }
-//         },
-//         {
-//             id: 3,
-//             name: 'Ann',
-//             personalData: {
-//                 gender: 'female',
-//                 age: 26,
-//                 technologies: ['HTML', 'CSS', 'JS/TS']
-//             }
-//         },
-//         {
-//             id: 4,
-//             name: 'Helen',
-//             personalData: {
-//                 gender: 'female',
-//                 age: 31,
-//                 technologies: ['HTML', 'CSS']
-//             }
-//         },
-//         {
-//             id: 5,
-//             name: 'Donald',
-//             personalData: {
-//                 gender: 'male',
-//                 age: 28,
-//                 technologies: ['React', 'JS/TS', 'Redux']
-//             }
-//         },
-//     ])
-//
-//
-//     return <ul>
-//         {users.map(u => {
-//             return (
-//                 u.personalData.technologies.length >= 5
-//                     ? <li key={u.id}>
-//                         {`User ${u.name}. ${u.personalData.age}. Ready to work.`}
-//                     </li>
-//                     : <li key={u.id}>
-//                         {`User ${u.name}. ${u.personalData.age}. `}
-//                     </li>)
-//         })}
-//     </ul>
-// }
-//
-//
-// ReactDOM.render(
-//     <UsersList/>, document.getElementById('root')
-// );
+import React, { ChangeEvent, useState } from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+
+
+type UserType = {
+    id: number
+    name: string
+    personalData: PersonalDataType
+}
+type PersonalDataType = {
+    gender: string
+    age: number
+    technologies: Array<TechnologiesType>
+}
+type TechnologiesType = 'HTML' | 'CSS' | 'React' | 'JS/TS' | 'Redux'
+
+
+function UsersList() {
+
+    const [users, setUsers] = useState<Array<UserType>>([
+        {
+            id: 1,
+            name: 'Bob',
+            personalData: {
+                gender: 'male',
+                age: 23,
+                technologies: ['HTML', 'CSS', 'React', 'JS/TS', 'Redux']
+            }
+        },
+        {
+            id: 2,
+            name: 'Alex',
+            personalData: {
+                gender: 'male',
+                age: 21,
+                technologies: ['HTML', 'CSS', 'React']
+            }
+        },
+        {
+            id: 3,
+            name: 'Ann',
+            personalData: {
+                gender: 'female',
+                age: 26,
+                technologies: ['HTML', 'CSS', 'JS/TS']
+            }
+        },
+        {
+            id: 4,
+            name: 'Helen',
+            personalData: {
+                gender: 'female',
+                age: 31,
+                technologies: ['HTML', 'CSS']
+            }
+        },
+        {
+            id: 5,
+            name: 'Donald',
+            personalData: {
+                gender: 'male',
+                age: 28,
+                technologies: ['React', 'JS/TS', 'Redux']
+            }
+        },
+    ])
+
+
+    return <ul>
+        {users.map(u => {
+            return (
+                u.personalData.technologies.length >= 5
+                    ? <li key={u.id}>
+                        {`User ${u.name}. ${u.personalData.age}. Ready to work.`}
+                    </li>
+                    : <li key={u.id}>
+                        {`User ${u.name}. ${u.personalData.age}. `}
+                    </li>)
+        })}
+    </ul>
+}
+
+
+ReactDOM.render(
+    <UsersList/>, document.getElementById('root')
+);
 
 // Те пользователи, у которых в стэке пять и более технологий, должны в списке
 // быть отмечены, как готовые к работе.
