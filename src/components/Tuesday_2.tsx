@@ -47,28 +47,28 @@ export default Tuesday_2;
 
 // 2.
 
-type StudentType = {
-    id: number
-    name: string
-}
-type Students = Array<StudentType>
-type Friends = {
-    [key: string]: Array<string>
-}
-
-export const students: Students = [                                               // true
-    {id: 1, name: "Bob"},
-    {id: 2, name: "Alex"},
-    {id: 3, name: "Ann"},
-    {id: 4, name: "Charley"},
-]
-
-export const friends: Friends = {
-    1: ["Oliver", "Jack", "Oscar",],
-    2: ["Jack", "Lewis", "Thomas",],
-    3: ["William", "Michael", "Lewis",],
-    4: ["Oscar", "James", "William",],
-}
+// type StudentType = {
+//     id: number
+//     name: string
+// }
+// type Students = Array<StudentType>
+// type Friends = {
+//     [key: string]: Array<string>
+// }
+//
+// export const students: Students = [                                               // true
+//     {id: 1, name: "Bob"},
+//     {id: 2, name: "Alex"},
+//     {id: 3, name: "Ann"},
+//     {id: 4, name: "Charley"},
+// ]
+//
+// export const friends: Friends = {
+//     1: ["Oliver", "Jack", "Oscar",],
+//     2: ["Jack", "Lewis", "Thomas",],
+//     3: ["William", "Michael", "Lewis",],
+//     4: ["Oscar", "James", "William",],
+// }
 
 //Дан список студентов и структура,
 //которая содержит список друзей каждого из студентов
@@ -77,30 +77,30 @@ export const friends: Friends = {
 
 // 3.
 
-// type StudentType = {
-//     id: number
-//     name: string
-//     age: number
-// }
-//
-// type FriendsType = {
-//     [key: string]: Array<string>
-// }
-//
-//
-// export const students: Array<StudentType> = [
-//     {id: 1, name: "Bob", age: 34},
-//     {id: 2, name: "Alex", age: 23},
-//     {id: 3, name: "Ann", age: 25},
-//     {id: 4, name: "Charley", age: 20},
-// ]
-//
-// export const friends: FriendsType = {                                  // "Thomas"
-//     1: ["Jack","Oliver", "Oscar",],
-//     2: ["Jack", "Lewis", "Thomas",],
-//     3: ["William",  "Lewis","Michael"],
-//     4: ["Oscar", "Thomas", "William",],
-// }
+type StudentType = {
+    id: number
+    name: string
+    age: number
+}
+
+type FriendsType = {
+    [key: string]: Array<string>
+}
+
+
+export const students: Array<StudentType> = [
+    {id: 1, name: "Bob", age: 34},
+    {id: 2, name: "Alex", age: 23},
+    {id: 3, name: "Ann", age: 25},
+    {id: 4, name: "Charley", age: 20},
+]
+
+export const friends: FriendsType = {                                  // "Thomas"
+    1: ["Jack","Oliver", "Oscar",],
+    2: ["Jack", "Lewis", "Thomas",],
+    3: ["William",  "Lewis","Michael"],
+    4: ["Oscar", "Thomas", "William",],
+}
 
 //Дан массив студентов и структура,
 //которая содержит список друзей каждого из студентов.
