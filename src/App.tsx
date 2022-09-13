@@ -8,6 +8,8 @@ import Monday_4 from './components/Monday_4';
 import Monday_TOTAL from './components/Monday_TOTAL';
 import Tuesday_1 from './components/Tuesday_1';
 import Tuesday_2 from './components/Tuesday_2';
+import Tuesday_3 from './components/Tuesday_3';
+import Tuesday_4 from './components/Tuesday_4';
 
 function App() {
     return (
@@ -34,7 +36,8 @@ function App() {
             <Monday_TOTAL/>
             <Tuesday_1/>
             <Tuesday_2/>
-
+            <Tuesday_3/>
+            <Tuesday_4/>
         </div>
     );
 }
