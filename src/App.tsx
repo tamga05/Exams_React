@@ -34,6 +34,7 @@ function App() {
             <Monday_3/>
             <Monday_4/>
             <Monday_TOTAL/>
+
             <Tuesday_1/>
             <Tuesday_2/>
             <Tuesday_3/>
