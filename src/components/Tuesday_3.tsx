@@ -17,36 +17,36 @@ export default Tuesday_3;
 
 // 1.
 
-type StudentType = {
-    id: number
-    name: string
-}
-
-type FriendsType = {
-    [key: string]: Array<string>
-}
-
-export const students: Array<StudentType> = [
-    {id: 1, name: 'Bob'},
-    {id: 2, name: 'Alex'},
-    {id: 3, name: 'Ann'},
-    {id: 4, name: 'Charley'},
-]
-
-export const friends: FriendsType = {
-    1: ['Oliver', 'Jack', 'Oscar',],
-    2: ['Jack', 'Lewis', 'Thomas',],
-    3: ['William', 'Michael', 'Lewis',],
-    4: ['Oscar', 'James', 'William',],
-}
-
-const getMutualFriends = (st_1: StudentType, st_2: StudentType,) => {
-    const result: Array<string> = []
-
-    friends[st_1.id].forEach(f => friends[st_2.id].includes(f) ? result.push(f) : null)                               // st_2.id
-
-    return result
-}
+// type StudentType = {
+//     id: number
+//     name: string
+// }
+//
+// type FriendsType = {
+//     [key: string]: Array<string>
+// }
+//
+// export const students: Array<StudentType> = [
+//     {id: 1, name: 'Bob'},
+//     {id: 2, name: 'Alex'},
+//     {id: 3, name: 'Ann'},
+//     {id: 4, name: 'Charley'},
+// ]
+//
+// export const friends: FriendsType = {
+//     1: ['Oliver', 'Jack', 'Oscar',],
+//     2: ['Jack', 'Lewis', 'Thomas',],
+//     3: ['William', 'Michael', 'Lewis',],
+//     4: ['Oscar', 'James', 'William',],
+// }
+//
+// const getMutualFriends = (st_1: StudentType, st_2: StudentType,) => {
+//     const result: Array<string> = []
+//
+//     friends[st_1.id].forEach(f => friends[st_2.id].includes(f) ? result.push(f) : null)                               // st_2.id
+//
+//     return result
+// }
 
 //Дан массив студентов и структура,
 //которая содержит список друзей каждого из студентов.
@@ -60,41 +60,41 @@ const getMutualFriends = (st_1: StudentType, st_2: StudentType,) => {
 
 // 2.
 
-// import React, {useState} from "react";
-//
-// type UserType = {
-//     id: number
-//     name: string
-//     status: "online" | "offline"
-// }
-//
-// type AddressType = {
-//     country: string
-//     city: string
-//     email: string
-// }
-//
-// type AdressesType = {
-//     [userID: string]: AddressType
-// }
-//
-//
-// const users: Array<UserType> = [
-//     {id: 1, name: "Bob", status: "online"},
-//     {id: 2, name: "Alex", status: "offline"},
-//     {id: 3, name: "Ann", status: "offline"},
-// ]
-//
-// export const addresses: AdressesType = {
-//     1: {country: "Russia", city: "Moscow", email: "hey@email.com"},
-//     2: {country: "Ukraine", city: "Kiev", email: "yo@send.ua"},
-//     3: {country: "Belarus", city: "Minsk", email: "wow@gogo.ru"},
-//
-// }
-//
-// export const changeUserStatus = (userID: number, status: string) => {
-//     return users.map(u => u.id === userID ? {...u, status} : u)                                                      // map
-// }
+import React, {useState} from "react";
+
+type UserType = {
+    id: number
+    name: string
+    status: "online" | "offline"
+}
+
+type AddressType = {
+    country: string
+    city: string
+    email: string
+}
+
+type AdressesType = {
+    [userID: string]: AddressType
+}
+
+
+const users: Array<UserType> = [
+    {id: 1, name: "Bob", status: "online"},
+    {id: 2, name: "Alex", status: "offline"},
+    {id: 3, name: "Ann", status: "offline"},
+]
+
+export const addresses: AdressesType = {
+    1: {country: "Russia", city: "Moscow", email: "hey@email.com"},
+    2: {country: "Ukraine", city: "Kiev", email: "yo@send.ua"},
+    3: {country: "Belarus", city: "Minsk", email: "wow@gogo.ru"},
+
+}
+
+export const changeUserStatus = (userID: number, status: string) => {
+    return users.map(u => u.id === userID ? {...u, status} : u)                                                      // map
+}
 
 // Дан список пользователей и структура, хранящая адреса пользователей.
 // Так же дана функция changeUserStatus, которая меняет статус пользователя.
